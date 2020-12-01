@@ -16,19 +16,19 @@ describe('Tests', () => {
         assert(myGame, 'Game object was not successfully created');
     }),    
     it('Can Bowl gutter game (all zeros)', () => {
-        bowlMany(myGame, 0, 10);
-
+        bowlMany(myGame, 0, 20);
         assert(0 === myGame.scoreGame(), 'Invalid score calculated');
     }),
     it('Can Bowl all ones (score of 20)', () => {
         bowlMany(myGame, 1, 20);
-        
         assert(20 === myGame.scoreGame(), 'Invalid score calculated, should be 20!');
     }),
     it('Can bowl spare', () => {
-        bowlMany(myGame, 1, 20);
+        myGame.bowl(5);
+        myGame.bowl(5);
+        myGame.bowl(3);
+        bowlMany(myGame, 0, 17);
         
-        console.log(myGame.scoreGame());
-        assert(20 === myGame.scoreGame(), 'Invalid score calculated, should be 20!');
+        assert(16 === myGame.scoreGame(), 'Invalid score calculated, should be 16!');
     })
 });
