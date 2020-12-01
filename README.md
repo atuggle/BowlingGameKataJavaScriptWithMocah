@@ -14,3 +14,4 @@ The Idea to good TDD is your test should force you to write new code and you onl
 3. Can bowl all 1's
 4. Can bowl a spare
 5. Can bowl a strike 
+6. Can bowl perfect game
