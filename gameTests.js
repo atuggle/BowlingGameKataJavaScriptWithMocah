@@ -40,5 +40,9 @@ describe('Tests', () => {
         bowlMany(myGame, 0, 15);
         
         assert(29 === myGame.scoreGame(), 'Invalid score calculated, should be 29!');
+    }),
+    it('Can bowl perfect game', () => {
+        bowlMany(myGame, 10, 12);
+        assert(300 === myGame.scoreGame(), 'Invalid score calculated, should be 300!');
     })
 });
