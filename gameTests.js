@@ -28,7 +28,17 @@ describe('Tests', () => {
         myGame.bowl(5);
         myGame.bowl(3);
         bowlMany(myGame, 0, 17);
-        
+
         assert(16 === myGame.scoreGame(), 'Invalid score calculated, should be 16!');
+    }),
+    it('Can bowl strike', () => {
+        myGame.bowl(5);
+        myGame.bowl(2);
+        myGame.bowl(10);
+        myGame.bowl(3);
+        myGame.bowl(3);
+        bowlMany(myGame, 0, 15);
+        
+        assert(29 === myGame.scoreGame(), 'Invalid score calculated, should be 29!');
     })
 });
