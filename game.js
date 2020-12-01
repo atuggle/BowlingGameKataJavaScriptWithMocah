@@ -1,13 +1,12 @@
-const assert = require('assert');
+"use strict";
 
-// Code
-const game = {
+class Game {
+    bowl(pins) {
+    }
 
+    scoreGame() {
+        return 0;
+    }
 };
 
-// Test
-describe('Tests', () => {
-    it('CanCreateGameObject', () => {
-        assert(game);
-    })
-});
+exports.Game = Game;
