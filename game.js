@@ -1,11 +1,16 @@
 "use strict";
 
 class Game {
+    constructor() {
+        this.score = 0;
+    }
+
     bowl(pins) {
+        this.score += pins;
     }
 
     scoreGame() {
-        return 0;
+        return this.score;
     }
 };
 
